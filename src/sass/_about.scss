@@ -1,0 +1,45 @@
+.about {
+    background-image: url('https://static.wixstatic.com/media/9c608a_30e6f5f663ec4293a615026ad2b037e2.png/v1/fill/w_1920,h_1007,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/9c608a_30e6f5f663ec4293a615026ad2b037e2.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: 62% 0%;
+
+    .text-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 850px;
+        h1 {
+            color: #706C6C;
+            font-size: 22px;
+            font-family: monospace;
+            padding-top: 250px;
+            color: #706C6C;
+            font-size: 34px;
+            letter-spacing: 0.4rem;
+            font-weight: 400;
+            line-height: 2;
+            height: 300px;
+        }
+    }
+
+    .texts {
+        display: flex;
+        justify-content: space-around;
+        color: #706C6C;
+        align-items: center;
+
+        p {
+            font-size: 15px;
+            width: 414px;
+            font-family: sans-serif;
+        }
+
+        h6 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 35px;
+            line-height: 1.7em;
+        }
+    }
+}

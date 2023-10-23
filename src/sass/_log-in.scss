@@ -1,0 +1,59 @@
+.log-in {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("https://static.wixstatic.com/media/9c608a_2d8a73a50d1a430ebc25c35924dc21b4.png/v1/fill/w_129,h_121,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/9c608a_2d8a73a50d1a430ebc25c35924dc21b4.png");
+    background-repeat: no-repeat;
+
+    .log-in-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 630px;
+
+        h1 {
+            font-size: 40px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .username,
+        .password {
+            width: 430px;
+            height: 65px;
+            font-size: 23px;
+            border: none;
+            display: flex;
+            align-items: center;
+            border: 1px solid none;
+            border-radius: 5px;
+            background-color: #d3cccc;
+            padding: 5px;
+
+            input {
+                width: 300px;
+                height: 47px;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+                background-color: #d3cccc;
+                color: rgb(121, 118, 118) !important;
+            }
+        }
+    }
+
+    .log-in-button {
+        width: 430px;
+        height: 50px;
+        font-size: 23px;
+        background-color: #29292a;
+        color: white;
+        border-radius: 5px;
+        border: none;
+    }
+
+    .img-flow {
+        background: none;
+        // background-image: url("https://img.freepik.com/premium-psd/rustic-autumnal-flower-illustrations-with-fall-leaf-leaves-colors_351449-507.jpg");
+        background-repeat: no-repeat;
+    }
+}

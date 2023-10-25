@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Fragrances = () => {
   const { addToCart, removeFromCart, countHandler, cartItems } = useContext(ShopContext)
   return (
-    <div>
+    <div className='fragrances'>
       <h1>- Fragrances -</h1>
       <div className="image"><img src="https://static.wixstatic.com/media/9c608a_52467b6bcf2f45cdb31a4caed169e74d.png/v1/fill/w_500,h_166,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/9c608a_52467b6bcf2f45cdb31a4caed169e74d.png" alt="" /></div>
       <div className='frags container'>

@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext ,useState,useEffect} from 'react'
 import HairandSkinData from '../datas/HairandSkinData'
 import { ShopContext } from '../context/shop-context'
 import {Link} from 'react-router-dom'
 const HairandSkin = () => {
   const {addToCart,cartItems,removeFromCart,countHandler}=useContext(ShopContext)
   return (
-    <div>
+    <div className='hair-and-skin'>
       <h1>-Hair&skin-</h1>
       <div className="image"><img src="https://static.wixstatic.com/media/9c608a_d0635c118ee5412bbdcbb248b68901dc.png/v1/fill/w_503,h_167,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/9c608a_d0635c118ee5412bbdcbb248b68901dc.png" alt="" /></div>
    <div className='container'>

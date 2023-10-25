@@ -8,9 +8,9 @@ import Contact from './Contact'
 import About from './About';
 import Cart from './Cart'
 import ShopContextProvider from '../context/shop-context';
-import ProductDetails from '../details/FragrancesDetails';
 import HairandSkinDetails from '../details/HairandSkinDetails';
 import LogIn from './LogIn';
+import FragrancesDetails from '../details/FragrancesDetails';
 function App() {
   return (
     <div className="App">
@@ -22,7 +22,7 @@ function App() {
             <Route path='/hair' element={<HairandSkin />} />
             <Route path='/hair/:id' element={<HairandSkinDetails />} />
             <Route path='/frag' element={<Fragrances />} />
-            <Route path='/frag/:id' element={<ProductDetails />} />
+            <Route path='/frag/:id' element={<FragrancesDetails />} />
             <Route path='/about' element={<About />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='/cart' element={<Cart />} />

@@ -1,13 +1,11 @@
 import { React } from 'react'
-import FragrancesData from '../datas/FragrancesData'
 import { useParams } from 'react-router-dom'
 import HairandSkinData from '../datas/HairandSkinData'
-function ProductDetails() {
+function HairandSkinDetails() {
   const { id } = useParams()
   console.log(id)
   const thisProduct = HairandSkinData.find((prod) => prod.id == id)
   console.log("this product", thisProduct)
-  console.log(FragrancesData)
   if (!thisProduct) {
     return (
       <div>Product is not found</div>
@@ -44,4 +42,4 @@ function ProductDetails() {
   )
 }
 
-export default ProductDetails
+export default HairandSkinDetails

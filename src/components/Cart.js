@@ -14,7 +14,7 @@ const Cart = () => {
       })}
       {totalAmount > 0 ?
         <div className="cart-total">
-          <p>Total : $ {totalAmount}</p>
+          <p>Total : $ {totalAmount.toFixed(2)}</p>
           <button onClick={() => removeAll()}>remove all</button>
         </div>
         : <div className='empty-box'>

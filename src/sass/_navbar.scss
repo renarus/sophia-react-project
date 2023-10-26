@@ -41,6 +41,21 @@
           color: #404041;
         }
       }
+      .items-count{
+        font-size: 10px;
+        background-color: rgb(239, 95, 95);
+        border-radius: 100%;
+        width: 15px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 10px;
+        right: 3px;
+        color: white;
+      }
+     
     }
   }
 

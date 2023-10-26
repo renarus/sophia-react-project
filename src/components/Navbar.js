@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { ShopContext } from '../context/shop-context'
 import { SlBasket } from 'react-icons/sl'
 const Navbar = () => {
-  const { cartItems } = useContext(ShopContext)
+  const { cartItems,cartItemsCount } = useContext(ShopContext)
   console.log(cartItems)
   return (
     <div className='navbar-content-shadow'>
@@ -24,8 +24,9 @@ const Navbar = () => {
             <Link to='/contact'>Contact</Link>
             <Link to='/login'><FontAwesomeIcon icon={faUser} /> <span>Log in</span></Link>
             <Link to='./cart'>
-              <div><SlBasket /></div>
-              <div><span>{cartItems.length}</span></div>
+              <div><SlBasket className='basket' />
+              <div className="items-count"><span>{cartItemsCount}</span></div>
+              </div>
             </Link>
           </ul>
         </div>

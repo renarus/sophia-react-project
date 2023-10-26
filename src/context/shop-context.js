@@ -20,16 +20,16 @@ const ShopContextProvider = (props) => {
   useEffect(()=>{
     localStorage.setItem('cartItems',JSON.stringify(cartItems))
   },[cartItems])
-  console.log(JSON.stringify(cartItems))
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
   }
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
+    
   }
   console.log(cartItems)
   const countHandler = (newAmount, itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: newAmount }))
+    setCartItems((prev) => ({ ...prev, [itemId]: newAmount })) 
   }
   const  cartTotal=() =>{
     let total=0;
@@ -41,14 +41,13 @@ const ShopContextProvider = (props) => {
     }
     return total;
   }
- const removeAll=()=>{
-  return setCartItems([])
-  // localStorage.removeItem('cartItems',cartItems)
-  // cartTotal(0)
+ const clearCart=()=>{
+ setCartItems(getDefaultCartItems())
+ localStorage.removeItem('cartItems')
 }
+const cartItemsCount = Object.values(cartItems).reduce((total, count) => total + count, 0);
 
-//  console.log(prev)
-  const contextValue = { cartItems, addToCart, removeFromCart, countHandler,cartTotal,removeAll }
+  const contextValue = { cartItems, addToCart, removeFromCart, countHandler,cartTotal,clearCart,cartItemsCount }
 
   return (
     <ShopContext.Provider value={contextValue}>

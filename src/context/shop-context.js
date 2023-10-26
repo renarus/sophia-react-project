@@ -1,22 +1,26 @@
 import React, { createContext, useEffect, useState } from 'react'
 import HairandSkinData from '../datas/HairandSkinData'
 export const ShopContext = createContext()
-// const getDefaultCartItems = () => {
-//   let cart = {}
-//   for (let i = 1; i < HairandSkinData.length + 1; i++) {
-//     cart[i] = 0
-//   }
-//   return cart;
-// }
-// getDefaultCartItems();
+const getDefaultCartItems = () => {
+  let cart = {}
+  for (let i = 1; i < HairandSkinData.length + 1; i++) {
+    cart[i] = 0
+  }
+  return cart;
+}
+getDefaultCartItems();
 const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(()=>{
     const localData=localStorage.getItem('cartItems')
     return localData ? JSON.parse(localData):[]
+    
   } )
+  console.log(cartItems)
+  
   useEffect(()=>{
     localStorage.setItem('cartItems',JSON.stringify(cartItems))
   },[cartItems])
+  console.log(JSON.stringify(cartItems))
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
   }
@@ -38,8 +42,9 @@ const ShopContextProvider = (props) => {
     return total;
   }
  const removeAll=()=>{
-  setCartItems([])
-  localStorage.removeItem('cartItems',cartItems)
+  return setCartItems([])
+  // localStorage.removeItem('cartItems',cartItems)
+  // cartTotal(0)
 }
 
 //  console.log(prev)

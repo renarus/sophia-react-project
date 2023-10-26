@@ -30,7 +30,7 @@ const CartItems = (props) => {
       <div className="cart-price"><p>${price}</p>
         <div className="minus-plus">
           <button className='minus' onClick={() => removeFromCart(id)}>-</button>
-          <input value={cartItems[id] > 0 ? cartItems[id] : "1"} onChange={e => { countHandler(e.target.value) }} />
+          <input value={cartItems[id] > 0 ? cartItems[id] : "1"} onChange={e => {countHandler(Number(e.target.value),id)}} />
           <button className='plus' onClick={() => addToCart(id)}>+</button>
         </div>
       </div>

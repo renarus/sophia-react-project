@@ -31,7 +31,7 @@ const ShopContextProvider = (props) => {
   const countHandler = (newAmount, itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: newAmount })) 
   }
-  const  cartTotal=() =>{
+  const cartTotal=() =>{
     let total=0;
     for(const item in cartItems){
       if(cartItems[item]>0){

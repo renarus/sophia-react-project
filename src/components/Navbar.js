@@ -17,6 +17,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-list">
           <ul>
+            <FontAwesomeIcon icon="fas fa-bars"  className='bar-icon'/>
             <Link to='/' className='const'> Home</Link>
             <Link to='/hair'>Hair and skin</Link>
             <Link to='/frag'>Fragrances</Link>

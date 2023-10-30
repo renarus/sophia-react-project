@@ -13,7 +13,7 @@ const LogIn = () => {
       </div>
       <div className="img-flow">
         <img src="https://static.wixstatic.com/media/9c608a_2d8a73a50d1a430ebc25c35924dc21b4.png/v1/fill/w_129,h_121,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/9c608a_2d8a73a50d1a430ebc25c35924dc21b4.png" alt="" />
-        <img src="https://i.pinimg.com/736x/f5/c9/76/f5c976c5ba635c311477fc88ce3ef997.jpg" alt="" />
+        {/* <img src="https://i.pinimg.com/736x/f5/c9/76/f5c976c5ba635c311477fc88ce3ef997.jpg" alt="" /> */}
       </div>
     </div>
   )

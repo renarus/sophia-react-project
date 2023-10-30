@@ -8,9 +8,8 @@ const getDefaultCartItems = () => {
   }
   return cart;
 }
-getDefaultCartItems();
 const ShopContextProvider = (props) => {
-  const [cartItems, setCartItems] = useState(()=>{
+  const [cartItems, setCartItems] = useState(getDefaultCartItems,()=>{
     const localData=localStorage.getItem('cartItems')
     return localData ? JSON.parse(localData):[]
     
@@ -27,7 +26,6 @@ const ShopContextProvider = (props) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
     
   }
-  console.log(cartItems)
   const countHandler = (newAmount, itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: newAmount })) 
   }
@@ -45,9 +43,14 @@ const ShopContextProvider = (props) => {
  setCartItems(getDefaultCartItems())
  localStorage.removeItem('cartItems')
 }
-const cartItemsCount = Object.values(cartItems).reduce((total, count) => total + count, 0);
 
-  const contextValue = { cartItems, addToCart, removeFromCart, countHandler,cartTotal,clearCart,cartItemsCount }
+const cartItemsCount = Object.values(cartItems).reduce((total, count)=> {
+  if(count>0){
+    return total+count;
+  }
+  return total;
+},0)
+const contextValue = { cartItems, addToCart, removeFromCart, countHandler,cartTotal,clearCart,cartItemsCount }
 
   return (
     <ShopContext.Provider value={contextValue}>

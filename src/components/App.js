@@ -11,12 +11,13 @@ import ShopContextProvider from '../context/shop-context';
 import HairandSkinDetails from '../details/HairandSkinDetails';
 import LogIn from './LogIn';
 import FragrancesDetails from '../details/FragrancesDetails';
+import HairandSkinData from '../datas/HairandSkinData';
 function App() {
   return (
     <div className="App">
       <ShopContextProvider>
         <BrowserRouter>
-          <Navbar />
+          <Navbar data={<HairandSkinData/>} />
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route path='/hair' element={<HairandSkin />} />

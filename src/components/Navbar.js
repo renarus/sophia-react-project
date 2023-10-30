@@ -4,9 +4,9 @@ import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { Link } from 'react-router-dom'
 import { ShopContext } from '../context/shop-context'
 import { SlBasket } from 'react-icons/sl'
-const Navbar = () => {
+const Navbar = (props) => {
   const { cartItems,cartItemsCount } = useContext(ShopContext)
-  console.log(cartItems)
+  const { id } = props.data
   return (
     <div className='navbar-content-shadow'>
       <div className="navbar-shadow"></div>
@@ -26,7 +26,7 @@ const Navbar = () => {
             <Link to='/login'><FontAwesomeIcon icon={faUser} /> <span>Log in</span></Link>
             <Link to='./cart'>
               <div><SlBasket className='basket' />
-              <div className="items-count"><span>{cartItemsCount}</span></div>
+              <div className="items-count"> <span> {cartItemsCount}</span></div>
               </div>
             </Link>
           </ul>

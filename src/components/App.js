@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <ShopContextProvider>
         <BrowserRouter>
-          <Navbar data={<HairandSkinData/>} />
+          <Navbar/>
           <Routes>
             <Route exact path='/' element={<Home />} />
             <Route path='/hair' element={<HairandSkin />} />

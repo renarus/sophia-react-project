@@ -3,9 +3,7 @@ import { useParams } from 'react-router-dom'
 import HairandSkinData from '../datas/HairandSkinData'
 function HairandSkinDetails() {
   const { id } = useParams()
-  console.log(id)
   const thisProduct = HairandSkinData.find((prod) => prod.id == id)
-  console.log("this product", thisProduct)
   if (!thisProduct) {
     return (
       <div>Product is not found</div>

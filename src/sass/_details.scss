@@ -1,7 +1,7 @@
 .details{
     display: flex;
     justify-content: space-evenly;
-    padding-top:180px;
+    padding-top:90px;
     .details-img-desc{
         .details-img{
           img{
@@ -11,7 +11,7 @@
           }
         }
         .details-desc{
-            height: 230px;
+            // height: 230px;
             display: flex;
             flex-direction: column;
             justify-content: center;

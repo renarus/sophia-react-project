@@ -4,9 +4,8 @@ import { faUser } from '@fortawesome/free-regular-svg-icons'
 import { Link } from 'react-router-dom'
 import { ShopContext } from '../context/shop-context'
 import { SlBasket } from 'react-icons/sl'
-const Navbar = (props) => {
-  const { cartItems,cartItemsCount } = useContext(ShopContext)
-  const { id } = props.data
+const Navbar = () => {
+  const { cartItemsCount } = useContext(ShopContext)
   return (
     <div className='navbar-content-shadow'>
       <div className="navbar-shadow"></div>

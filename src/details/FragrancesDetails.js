@@ -5,8 +5,6 @@ function FragrancesDetails() {
   const { id } = useParams()
   console.log(id)
   const thisProduct = FragrancesData.find((prod) => prod.id == id)
-  // console.log("this product", thisProduct)
-  // console.log(FragrancesData)
   if (!thisProduct) {
     return (
       <div>Product is not found</div>
